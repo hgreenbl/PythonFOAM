@@ -1,9 +1,9 @@
-source /opt/openfoam8/etc/bashrc
-export PYTHON_LIB_PATH=/home/rmlans/Desktop/ROMS/PythonFOAM/ofenv/lib
-export PYTHON_BIN_PATH=/home/rmlans/Desktop/ROMS/PythonFOAM/ofenv/bin
-export PYTHON_INCLUDE_PATH=/home/rmlans/Desktop/ROMS/PythonFOAM/ofenv/include/python3.6m
-export NUMPY_INCLUDE_PATH=/home/rmlans/Desktop/ROMS/PythonFOAM/ofenv/lib/python3.6/site-packages/numpy/core/include
-export PYTHON_LIB_NAME=lpython3.6m
+source /lus/grand/projects/SEEr-planning/spack/opt/spack/linux-ubuntu20.04-zen2/gcc-9.3.0/openfoam-org-8-6taoyscxhdfq2tsuiqbbbrmcduquc7cx/etc/bashrc
+export PYTHON_LIB_PATH=/lus/theta-fs0/software/thetagpu/conda/2021-11-30/mconda3/lib
+export PYTHON_BIN_PATH=/lus/theta-fs0/software/thetagpu/conda/2021-11-30/mconda3/bin
+export PYTHON_INCLUDE_PATH=/lus/theta-fs0/software/thetagpu/conda/2021-11-30/mconda3/include/python3.8/
+export NUMPY_INCLUDE_PATH=/lus/theta-fs0/software/thetagpu/conda/2021-11-30/mconda3/lib/python3.8/site-packages/numpy/core/include
+export PYTHON_LIB_NAME=lpython3.8
 
 
 export LD_LIBRARY_PATH=$PYTHON_LIB_PATH:$LD_LIBRARY_PATH
