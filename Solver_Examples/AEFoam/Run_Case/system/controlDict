@@ -17,13 +17,13 @@ FoamFile
 
 application     AEFoam;
 
-startFrom       latestTime;
+startFrom       startTime;
 
 startTime       0;
 
 stopAt          endTime;
 
-endTime         10000.0;
+endTime         0.035;
 
 deltaT          1.0e-5;
 
