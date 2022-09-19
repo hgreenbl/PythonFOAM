@@ -132,3 +132,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# cobalt
+*.cobaltlog
+*.error
+*.output
+# decomposition
+**/Run_Case/processor*/
+# saved model weights
+**/Run_Case/*.h5
