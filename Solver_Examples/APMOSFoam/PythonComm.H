@@ -92,6 +92,7 @@ else
     getrusage(0,&usage_info);
     std::cout << "Resource usage line 99:" << usage_info.ru_maxrss << std::endl;
 
+    rank_val = PyLong_FromLong(rank);
     PyTuple_SetItem(snapshot_args, 0, array_2d);
     PyTuple_SetItem(snapshot_args, 1, rank_val);
     (void) PyObject_CallObject(snapshot_func, snapshot_args);

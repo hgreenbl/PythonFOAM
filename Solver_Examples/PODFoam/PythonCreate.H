@@ -57,7 +57,8 @@ volScalarField vpod_(U.component(vector::Y));
 volScalarField wpod_(U.component(vector::Z));
 
 // To pass rank to Python interpreter
-PyObject *rank_val = PyLong_FromLong(Pstream::myProcNo());
+int rank = Pstream::myProcNo();
+PyObject *rank_val = PyLong_FromLong(rank);
 PyObject *array_2d(nullptr);
 
 ///int encode_mode = 0;
