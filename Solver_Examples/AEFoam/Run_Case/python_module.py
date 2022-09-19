@@ -16,6 +16,15 @@ from tensorflow.keras import backend as K
 from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 from tensorflow.keras.models import load_model, Sequential, Model
 
+import mpi4py
+mpi4py.rc.initialize = False
+mpi4py.rc.finalize = False
+from mpi4py import MPI
+if MPI.Is_initialized(): # we're not running in serial mode
+    gpus = tf.config.list_physical_devices('GPU')
+    if len(gpus) > 0:
+        tf.config.set_visible_devices([gpus[MPI.COMM_WORLD.Get_rank() % len(gpus)]], 'GPU')
+
 # Custom activation (swish)
 def my_swish(x, beta=1.0):
     return x * K.sigmoid(beta * x)
