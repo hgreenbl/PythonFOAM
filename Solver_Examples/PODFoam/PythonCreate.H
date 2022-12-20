@@ -68,6 +68,6 @@ int truncation = 5;
 
 // Placeholder to grab data before sending to Python
 int num_cells = mesh.cells().size();
-double input_vals[num_cells][3];
+auto input_vals = new double[num_cells][3];
 
 // ************************************************************************* //
